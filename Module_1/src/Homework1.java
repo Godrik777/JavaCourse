@@ -137,26 +137,26 @@ public class Homework1 {
 
         //Финансовые показатели после налогов
         double taxesTotal = 0;
-        double sum = 0;
+        double stake = 0;
         double tax;
         while (true) {
             if (profit > 2_000_000) {
-                sum = profit - 2_000_000;
-                tax = sum * 0.13;
-                profit -= sum;
+                stake = profit - 2_000_000;
+                tax = stake * 0.13;
+                profit -= stake;
                 taxesTotal += tax;
-                System.out.println("Сумма = " + sum + " руб. Облагается ставкой 13%. Налог = " + tax + " руб.");
+                System.out.println("Сумма = " + stake + " руб. Облагается ставкой 13%. Налог = " + tax + " руб.");
             } else if (profit > 1_000_000 && profit <= 2_000_000) {
-                sum = profit - 1_000_000;
-                tax = sum * 0.10;
+                stake = profit - 1_000_000;
+                tax = stake * 0.10;
                 profit -= 1_000_000;
                 taxesTotal += tax;
-                System.out.println("Сумма = " + sum + " руб. Облагается ставкой 10%. Налог = " + tax + " руб.");
+                System.out.println("Сумма = " + stake + " руб. Облагается ставкой 10%. Налог = " + tax + " руб.");
             } else if (profit > 0 && profit <= 1_000_000) {
                 profit -= 1_000_000;
                 tax = 1_000_000 * 0.08;
                 taxesTotal += tax;
-                System.out.println("Сумма = " + sum + " руб. Облагается ставкой 8%. Налог = " + tax + " руб.");
+                System.out.println("Сумма = " + stake + " руб. Облагается ставкой 8%. Налог = " + tax + " руб.");
             } else {
                 System.out.println("Общая сумма налогов = " + taxesTotal + " руб.");
                 break;
