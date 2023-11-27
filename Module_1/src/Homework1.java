@@ -149,13 +149,13 @@ public class Homework1 {
             } else if (profit > 1_000_000 && profit <= 2_000_000) {
                 stake = profit - 1_000_000;
                 tax = stake * 0.10;
-                profit -= 1_000_000;
+                profit -= stake;
                 taxesTotal += tax;
                 System.out.println("Сумма = " + stake + " руб. Облагается ставкой 10%. Налог = " + tax + " руб.");
             } else if (profit > 0 && profit <= 1_000_000) {
                 stake = profit;
                 tax = stake * 0.08;
-                profit -= 1_000_000;
+                profit -= stake;
                 taxesTotal += tax;
                 System.out.println("Сумма = " + stake + " руб. Облагается ставкой 8%. Налог = " + tax + " руб.");
             } else {
