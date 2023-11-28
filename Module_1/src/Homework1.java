@@ -54,7 +54,7 @@ public class Homework1 {
         //Распечатать полученный индекс
         String simply = "this is simply. This is my favorite song.";
         String simplyReplace = simply.replaceAll("this is", "those are");
-        int index = simplyReplace.indexOf('o', 3);
+        int index = simplyReplace.indexOf('o', simplyReplace.indexOf('o') + 1);
         System.out.println(index);
     }
 
@@ -139,29 +139,27 @@ public class Homework1 {
         double taxesTotal = 0;
         double stake = 0;
         double tax;
-        while (true) {
-            if (profit > 2_000_000) {
-                stake = profit - 2_000_000;
-                tax = stake * 0.13;
-                profit -= stake;
-                taxesTotal += tax;
-                System.out.println("Сумма = " + stake + " руб. Облагается ставкой 13%. Налог = " + tax + " руб.");
-            } else if (profit > 1_000_000 && profit <= 2_000_000) {
-                stake = profit - 1_000_000;
-                tax = stake * 0.10;
-                profit -= stake;
-                taxesTotal += tax;
-                System.out.println("Сумма = " + stake + " руб. Облагается ставкой 10%. Налог = " + tax + " руб.");
-            } else if (profit > 0 && profit <= 1_000_000) {
-                stake = profit;
-                tax = stake * 0.08;
-                profit -= stake;
-                taxesTotal += tax;
-                System.out.println("Сумма = " + stake + " руб. Облагается ставкой 8%. Налог = " + tax + " руб.");
-            } else {
-                System.out.println("Общая сумма налогов = " + taxesTotal + " руб.");
-                break;
-            }
+
+        if (profit > 2_000_000) {
+            stake = profit - 2_000_000;
+            tax = stake * 0.13;
+            profit -= stake;
+            taxesTotal += tax;
+            System.out.println("Сумма = " + stake + " руб. Облагается ставкой 13%. Налог = " + tax + " руб.");
+        }
+        if (profit > 1_000_000 && profit <= 2_000_000) {
+            stake = profit - 1_000_000;
+            tax = stake * 0.10;
+            profit -= stake;
+            taxesTotal += tax;
+            System.out.println("Сумма = " + stake + " руб. Облагается ставкой 10%. Налог = " + tax + " руб.");
+        }
+        if (profit > 0 && profit <= 1_000_000) {
+            tax = stake * 0.08;
+            taxesTotal += tax;
+            System.out.println("Сумма = " + profit + " руб. Облагается ставкой 8%. Налог = " + tax + " руб.");
+            System.out.println("Общая сумма налогов = " + taxesTotal + " руб.");
         }
     }
 }
+
