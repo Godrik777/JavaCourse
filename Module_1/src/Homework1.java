@@ -16,9 +16,9 @@ public class Homework1 {
         // Если содержит "ов " то печатаем на экран: Уважаемый {name}
         // В иных случаях печатаем на экран: Неизвестное лицо {name}
         String nameCorrect = name.trim().toUpperCase();
-        if (nameCorrect.contains("ова ")) {
+        if (nameCorrect.toLowerCase().contains("ова ")) {
             System.out.println("Уважаемая " + nameCorrect);
-        } else if (nameCorrect.contains("ов ")) {
+        } else if (nameCorrect.toLowerCase().contains("ов ")) {
             System.out.println("Уважаемый " + nameCorrect);
         } else
             System.out.println("Неизвестное лицо " + nameCorrect);
