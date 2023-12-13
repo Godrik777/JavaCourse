@@ -3,10 +3,10 @@ package second.shop;
 public class Worker {
     String name;
     int age;
-    String gender;
+    boolean gender;
     Item[] items;
 
-    public Worker(String name, int age, String gender, Item[] items) {
+    public Worker(String name, int age, Boolean gender, Item[] items) {
         this.name = name;
         this.age = age;
         this.gender = gender;

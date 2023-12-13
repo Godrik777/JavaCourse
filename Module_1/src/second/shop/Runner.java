@@ -9,8 +9,8 @@ public class Runner {
         Item[] vasilyItems = {hamer, screwdriver};
         Item[] maryanaItems = {notebook, pen};
 
-        Worker vasily = new Worker("Василий", 30, "мужчина", vasilyItems);
-        Worker maryana = new Worker("Марьяна", 25, "женский", maryanaItems);
+        Worker vasily = new Worker("Василий", 30, true, vasilyItems);
+        Worker maryana = new Worker("Марьяна", 25, false, maryanaItems);
         Worker[] workers = {vasily, maryana};
 
         Shop shop = new Shop(workers);

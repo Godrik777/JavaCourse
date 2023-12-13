@@ -9,7 +9,12 @@ public class Shop {
 
     public void printWorkers() {
         for (Worker worker : workers) {
-            System.out.println(worker.name + ": " + worker.age + ", " + worker.gender + ", список вещей: ");
+            String gender;
+            if(worker.gender){
+                gender = "мужчина";
+            } else
+                gender = "женщина";
+            System.out.println(worker.name + ": " + worker.age + ", " + gender + ", список вещей: ");
             for (Item item : worker.items) {
                 System.out.println(item.name + " " + item.weight + " гр.");
             }
