@@ -1,6 +1,6 @@
 package third.ex1;
 
-public class Deciduous extends Tree {
+public abstract class Deciduous extends Tree {
     protected boolean foliage;
 
 
