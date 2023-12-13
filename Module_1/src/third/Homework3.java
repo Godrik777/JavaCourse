@@ -1,8 +1,6 @@
 package third;
 
-import third.ex1.Conifer;
-import third.ex1.Deciduous;
-import third.ex1.Tree;
+import third.ex1.*;
 
 public class Homework3 {
     public static void main(String[] args) {
@@ -13,11 +11,11 @@ public class Homework3 {
     }
 
     public static void ex1() {
-        Deciduous birch = new Deciduous(true, 1, true);
+        Birch birch = new Birch(true, 1);
         birch.downFoliage();
         birch.upFoliage();
-        Conifer pine = new Conifer("крупные", 2);
-        Conifer fir = new Conifer("мелкие", 3);
+        Pine pine = new Pine(2);
+        Fir fir = new Fir( 3);
         int sumAge = 0;
         Tree[] trees = {birch, pine, fir};
         for (Tree tree : trees) {

@@ -1,10 +1,14 @@
 package third.ex1;
 
 public class Conifer extends Tree {
-    private String needles;
+    protected String needles;
 
-    public Conifer(String needles, int age) {
+    public Conifer(int age, String needles) {
         super(age);
         this.needles = needles;
+    }
+
+    public String getNeedles() {
+        return needles;
     }
 }
