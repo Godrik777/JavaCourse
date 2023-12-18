@@ -1,9 +1,9 @@
 package third.ex1;
 
-public class Birch extends Deciduous{
+public class Birch extends Deciduous {
 
-    public Birch(boolean foliage, int age) {
-        super(foliage, age);
+    public Birch(int age) {
+        super(age);
     }
 
     @Override

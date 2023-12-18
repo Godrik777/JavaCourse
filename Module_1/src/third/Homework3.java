@@ -15,12 +15,12 @@ public class Homework3 {
     }
 
     public static void ex1() {
-        Birch birch = new Birch(true, 1);
+        Birch birch = new Birch(2);
         birch.downFoliage();
         birch.upFoliage();
         Pine pine = new Pine(2);
         Fir fir = new Fir(3);
-        int sumAge = 0;
+        double sumAge = 0;
         Tree[] trees = {birch, pine, fir};
         for (Tree tree : trees) {
             sumAge += tree.getAge();

@@ -1,19 +1,19 @@
 package third.ex1;
 
 public abstract class Deciduous extends Tree {
-    protected boolean foliage;
+    private boolean foliage = true;
 
-
-    public Deciduous(boolean foliage, int age) {
+    public Deciduous(int age) {
         super(age);
-        this.foliage = foliage;
     }
 
     public void downFoliage() {
+        this.foliage = false;
         System.out.println("Листва опала");
     }
 
     public void upFoliage() {
+        this.foliage = true;
         System.out.println("Листья появляются.");
     }
 }
