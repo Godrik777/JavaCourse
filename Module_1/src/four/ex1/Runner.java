@@ -14,8 +14,8 @@ public class Runner {
                 new Bus(false, 12, 3, 2.3, 30)
         };
 
-        double carWashCost = CarWash.washCar(transports);
-        System.out.println("Мэрия заплатит " + carWashCost + " рублей за мойку машин.");
+        CarWash carWash = new CarWash();
+        System.out.println("Мэрия заплатит " + carWash.washCar(transports) + " рублей за мойку машин.");
     }
 }
 

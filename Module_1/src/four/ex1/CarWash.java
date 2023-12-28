@@ -2,7 +2,7 @@ package four.ex1;
 
 public class CarWash {
 
-    public static double washCar(Transport transport) {
+    public double washCar(Transport transport) {
         if (transport.isClean()) {
             return 0;
         }
@@ -16,7 +16,7 @@ public class CarWash {
         return cost;
     }
 
-    public static double washCar(Transport[] transports) {
+    public double washCar(Transport[] transports) {
         double totalCost = 0;
         for (Transport transport : transports) {
             totalCost += washCar(transport);
